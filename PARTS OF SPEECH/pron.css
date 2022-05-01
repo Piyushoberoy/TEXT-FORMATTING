@@ -1,0 +1,120 @@
+* body{
+		background-image:url('prono.jpg');
+		background-size: 100%;
+	}
+	 p{
+                background-color:rgba(0,0,0,0.7);
+                padding: 28px;
+                margin-left: 100px;
+                margin-right: 100px;
+                list-style-type:decimal;
+                font-size: 20px;
+                color: IndianRed ;
+                text-align: center;
+                 animation: 2s slide-left;
+  animation-delay: 3s;
+  animation-iteration-count:3;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: -500px;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+            
+
+            h1{
+            	font-size: 45px;
+            	background-color: white;
+            	text-align: center;
+                background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+img{
+           	border-radius: 15px;
+           	size: 100%;
+           }
+
+
+dl{
+     background-color:rgba(0,0,0,0.3);
+                padding: 20px;
+                margin-left: 100px;
+                margin-right: 100px;
+                list-style-type:decimal;
+                font-size: 15px;
+
+
+    }
+dl dt{
+                
+                margin: 20px;
+                color: yellow;
+                background-color:teal;
+                animation-name:example;
+font-size: 20px;
+  animation-duration: 4s;
+  animation-iteration-count:infinite;
+
+}
+
+@keyframes example {
+  from {background-color: Teal;}
+  to {background-color:red}
+}
+
+	
+	dl dd{
+		font-size: 20px;
+		
+	}
+    ul{
+        color: white;
+        animation: 2s slide-right 2s forwards;
+    transform:translateX(-100%);
+    
+}
+
+@keyframes slide-right {
+  to {
+    transform:translateX(0);
+  }
+}
+    }
+
+	ul li{
+		color: white;
+		font-size: 20px;
+		font-style: arial;
+         animation: 2s slide-left;
+  
+}
+            
+
+	
+
+img{
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 15px;
+	border-color: black;
+}
+

@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" href="{% static 'Content/logo.jpg' %}">
+	<title>Nouns</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'Content/noun.css' %}">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+	<div data-aos="zoom-in" data-aos-offset="150" data-aos-easing="ease-in-sine" data-aos-duration="1200">
+		<h1> What is Noun?</h1>
+
+		<p>
+			A noun is a word that names something, such as a person, place, thing, or idea.
+
+			In a sentence, nouns can play the role of subject, direct object, indirect objects, subject complement,
+			object
+			complement, appositive, or adjective.</p>
+		<br>
+		<center><img src="{% static 'Content/n.jpg' %}" height="400" width="1000"></center>
+		<div data-aos="flip-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1200">
+			<dl><B><u>
+						<center>
+							<FONT size="60px" color="red">TYPES OF NOUNS</FONT>
+						</center>
+					</u><B>
+						<dt>COMMON NOUNS: </dt>
+						<dd> Common nouns refer to people, places and things in general like chair or dog.
+							<br>
+							Any noun that is not a name is a common noun Examples:-
+						</dd>
+						<ul style="square">
+							<li>Have you seen my
+								<Font color="black">dog?</font>
+							</li>
+							<li>
+								The
+								<Font color="black">books</font>
+								are on your desk.
+							</li>
+						</ul>
+
+
+						<dt>PROPER NOUNS</dt>
+						<dd>Names of people, places or organizations are proper nouns. Your name is a proper noun.
+							<br>London is a proper noun. Examples:-
+						</dd>
+						<ul>
+							<li>Let me introduce you to
+								<Font color="black">Mary.</font>
+							</li>
+
+							<li>
+								The capital of Italy is <Font color="black">
+									Rome.</Font>
+							</li>
+
+						</ul>
+
+
+
+						<dt>CONCRETE NOUNS</dt>
+						<dd>Concrete nouns are physical things that you can touch. Examples:-</dd>
+						<ul>
+							<li>How many <Font color="black">stars</font> are there in the universe?</li>
+
+							<li>Pour the <Font color="black">water</font> down the drain.
+							</li>
+
+
+						</ul>
+
+
+
+
+						<dt>ABSTRACT NOUNS</dt>
+						<dd>Abstract nouns are the opposite of concrete nouns. They are things that you cannot touch.
+							<br> Abstract nouns are ideas, concepts and feelings. Examples:-
+						</dd>
+						<ul>
+							<li>He has great <Font color="black">strength. </font>
+							</li>
+
+							<li>Their lives were full of<Font color="black"> sadness.</font>
+							</li>
+
+
+						</ul>
+
+
+						<dt>COUNTABLE NOUNS</dt>
+
+						<dd>You can count countable nouns. Countable nouns have singular and plural forms. Examples:-
+						</dd>
+						<ul>
+							<li>I have only five <Font color="black">dollars. </font>
+							</li>
+
+							<li>There are lots of <Font color="black">people </font> but we don't have a car.</li>
+
+
+						</ul>
+
+
+
+						<dt>UNCOUNTABLE NOUNS</dt>
+						<dd>You cannot count uncountable nouns. You need to use "measure words" to quantify them.
+							Examples:-
+						</dd>
+						<ul>
+							<li>Air-conditioners use a lot of <font color="black">electricity.</font>
+							</li>
+							<li>Many Asians eat <font color="black">rice.</font>
+							</li>
+						</ul>
+
+
+						<dt>COLLECTIVE NOUNS</dt>
+						<dd>A collective noun denotes a group of individuals. Examples:-
+							<ul>
+								<li>His <font color="black">family</font> live in different countries.</li>
+
+								<li>The new <font color="black">company</font> is the result of a merger.</li>
+							</ul>
+
+						</dd>
+
+
+						<dt>COMPOUND NOUNS</dt>
+						<dd>A compound noun is a noun that is made with two or more words. Examples:-</dd>
+
+						<ul>
+							<li>Can we use the <font color="black">swimming pool?</font>
+							<li>They stop work at<font color="black"> sunset.</font>
+							</li>
+						</ul>
+			</dl>
+			<br>
+			<form action="{% url 'content' %}" method="POST">{% csrf_token %}
+				<center><input id="file-upload" type="submit" for="file-upload" class="custom-file-upload"
+						value="Index">
+				</center>
+			</form>
+			<form action="{% url 'pronouns' %}" method="POST">{% csrf_token %}
+				<center><input id="file-upload1" type="submit" for="file-upload1" class="custom-file-upload1"
+						value="Next">
+				</center>
+			</form>
+		</div>
+	</div>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>

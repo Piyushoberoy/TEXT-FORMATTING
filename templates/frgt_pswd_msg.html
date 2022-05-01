@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="{% static 'CSS/logo.jpg' %}">
+    <title>Password</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/frgt_pswd_msg.css' %}" />
+</head>
+
+<body>
+    <img src="https://preview.redd.it/izqwm1g21b751.png?auto=webp&s=da8f46dec79e38870efeac10d5a829e50792686b"
+        class="icon">
+    <h1> Check your mail </h1>
+    <p class="one">We have sent a password recover <br>instructions to your email.</p>
+    <a href="http://www.gmail.com/">
+        <button> Open email app </button> </a>
+    <p class="two"> Did not receive the email? Check your spam box,or</p>
+    <a href="{% url 'frgt_pswd' %}"> Try another email address. </a>
+
+</body>
+
+</html>

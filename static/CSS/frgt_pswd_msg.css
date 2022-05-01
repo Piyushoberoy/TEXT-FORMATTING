@@ -1,0 +1,21 @@
+body { background-color:lavender;
+    text-align: center;}
+    .icon {
+    width:200px;
+    height:200px;}
+    h1 { text-decoration: underline;
+    color: darkgreen; }
+    .one { font-size:30px;
+    color: olive;}
+    button {
+    background-color: royalblue;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 24px 24px 0px 0px;
+}
+    a {color:red;
+    font-size:20px;
+    text-decoration:none;
+    }
+    button:hover { background-color: aquamarine;}
+    a:hover {color: green; }

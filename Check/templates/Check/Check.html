@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'Check/logo.jpg' %}">
+    <title>Check</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Check/Main.css' %}" />
+</head>
+
+<body>
+    <div class="align">
+        <h2 style="color: rgba(255, 255, 255, 0.863);">Type your text here</h2>
+        <form action="Correct" method="POST">{% csrf_token %}
+            <textarea name="text" style="margin:0px; width:780px; height:586px;" id="txt"></textarea>
+            <button type="submit">Check</button>
+        </form>
+    </div>
+    <div class="align1">
+        <h2>Drag your file here</h2>
+        <form action="Correct" method="POST">{% csrf_token %}
+            <label for="file-upload" class="custom-file-upload">
+                Custom Upload
+            </label>
+            <input id="file-upload" type="file" />
+            <button type="submit" class="file">Check</button>
+        </form>
+    </div>
+</body>
+
+</html>

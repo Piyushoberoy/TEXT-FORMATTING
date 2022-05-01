@@ -1,0 +1,62 @@
+ol{
+                background-color:rgba(0,0,0,0.5);
+                padding: 25px;
+                margin-left: 100px;
+                margin-right: 100px;
+                list-style-type:decimal;
+                font-size: 28px;
+
+
+            }
+
+
+            ol li{
+                background-color:black;
+                margin: 10px;
+                border-style: groove;
+                color: white;
+                animation: box 15s ease-in-out infinite;
+            }
+
+            
+            .bodyClass{
+                margin-left: 200px;
+                margin-right: 200px;
+                padding: 10px;
+                background:url(eng.jpg) no-repeat center center fixed; 
+                background-size: cover;
+            }
+            
+            #p1{
+                border: 5px solid black;
+                border-style: groove;
+                background-color:lightcoral;
+                animation: change 15s ease-in-out infinite;
+                color: black;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                padding: 10px;
+                font-size: xx-large;
+            }
+            a{
+        color: yellow;
+    }
+
+
+     a:hover {
+  background-color: red;
+  color: white;
+}
+
+@keyframes change { 
+0% { background-color:lightcoral;}
+25% { background-color:yellow;}
+50% { background-color:lavender;}
+100% { background-color:lightgreen;}
+}
+
+@keyframes box { 
+0% { background-color:black;}
+25% { background-color:MediumSeaGreen;}
+50% { background-color:DarkCyan;}
+100% { background-color:palevioletred;}
+}

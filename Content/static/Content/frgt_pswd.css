@@ -1,0 +1,28 @@
+body{
+    margin-top:100px;
+    text-align:center;
+    background-image: url("https://i.pinimg.com/originals/5d/a9/31/5da931c0333de9b895b9b79aa3fae7e3.jpg");
+    }
+    .img{
+    width:100px;
+    height: 100px;
+    border-radius: 20px; }
+    h1{
+    color:white;}
+    p { 
+    font-size: 28px; 
+    color: lightpink;}
+    
+    .formbox input[type="email"] {
+    height: 40%;
+    font-size: 18px;}
+    
+    button {
+    background-color: lightseagreen;
+    cursor: pointer;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 24px 24px 0px 0px;
+    }
+    button:hover {
+    background-color:skyblue }

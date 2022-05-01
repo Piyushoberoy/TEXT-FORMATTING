@@ -1,0 +1,62 @@
+
+	* body{
+		background-image: url('https://cdn.edu.buncee.com/assets/14bd3010a30758776402a7b402f886a1/background-design-magicssky-080620.png?timestamp=1596746118');
+        background-size: cover;}
+	 p{
+                background-color:rgba(0,0,0,0.5);
+                padding: 20px;
+                margin-left: 100px;
+                margin-right: 100px;
+                list-style-type:decimal;
+                font-size: 28px;
+                color: tomato;
+                text-align: center;
+            }
+            h1{
+            	font-size: 45px;
+            	background-color: white;
+            	text-align: center;
+                color: darkseagreen;
+            }
+           img{
+           	border-radius: 15px;
+           	size: 100%;
+           }
+
+dl{
+                background-color:rgba(0,0,0,0.3);
+                padding: 20px;
+                margin-left: 100px;
+                margin-right: 100px;
+                list-style-type:decimal;
+                font-size: 15px;
+
+
+            }
+
+            dl dt{
+                
+                margin: 20px;
+                color: steelblue;
+                background-color:lightgrey;
+                font-size:20px;
+                height:30px;
+
+	}
+	dl dd{
+		font-size: 20px;
+                color:limegreen;
+		
+	}
+	ul li{
+		color:darksalmon;
+		font-size: 20px;
+		font-style: arial;
+	}
+img{
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 15px;
+	border-color: black;
+}
+

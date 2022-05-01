@@ -1,0 +1,23 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'Check/logo.jpg' %}">
+    <title>Correct</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Check/Main.css' %}" />
+</head>
+<body style="color:#00FFFF;">
+    <h1 style="color:black;">Following is your gramatically checked text.<br><br></h1>
+    <h3 style="color: red;">Original Text:-</h3>
+    <br>
+    {{org}}
+    <br>
+    <br>
+    <h3 style="color:rgb(86, 226, 110);">Correct Text:-</h3>
+    <br>
+    {{text}}
+    
+</body>
+</html>

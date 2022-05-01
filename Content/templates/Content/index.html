@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="{% static 'Content/logo.jpg' %}">
+    <title>INDEX</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Content/index.css' %}" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bodyClass">
+    <center>
+        <div data-aos="flip-right" data-aos-easing="linear" data-aos-duration="1000">
+            <h1 id="p1">PARTS OF SPEECH</h1>
+        </div>
+        <div data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000">
+            <ol>
+                <form method="POST" action="{% url 'nouns' %}">{% csrf_token %}
+                    <li>Nouns &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp&nbsp &nbsp <input type="submit"
+                            value="Read more about Nouns.."></li>
+                </form>
+                <form method="POST" action="{% url 'pronouns' %}">{% csrf_token %}
+                    <li>Pronouns &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp <input type="submit"
+                            value="Read more about Pronouns.."></li>
+                </form>
+                <form method="POST" action="{% url 'verbs' %}">{% csrf_token %}
+                    <li>Verbs &nbsp &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp &nbsp &nbsp <input type="submit"
+                            value="Read more about Verbs.."></li>
+                </form>
+                <form method="POST" action="{% url 'adverbs' %}">{% csrf_token %}
+                    <li>Adverbs &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp <input type="submit"
+                            value="Read more about Adverbs.."></li>
+                </form>
+                <form method="POST" action="{% url 'adjectives' %}">{% csrf_token %}
+                    <li>Adjectives &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp <input type="submit"
+                            value="Read more about Adjectives.."></li>
+                </form>
+                <form method="POST" action="{% url 'prepositions' %}">{% csrf_token %}
+                    <li>Prepositions &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp <input type="submit"
+                            value="Read more about Prepositions.."></li>
+                </form>
+                <form method="POST" action="{% url 'conjunctions' %}">{% csrf_token %}
+                    <li>Conjunctions &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp <input type="submit"
+                            value="Read more about Conjunctions.."></li>
+                </form>
+                <form method="POST" action="{% url 'interjections' %}">{% csrf_token %}
+                    <li>Interjections &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp <input type="submit"
+                            value="Read more about Interjections.."></li>
+                </form>
+                {% for post in file %}
+                <button class="btn btn2" style="text-decoration: none;"><a href="{{post.doc.url}}"
+                        download="{{post.doc.url}}" id="anchor">DOWNLOAD</a></button>
+                {% endfor %}
+            </ol>
+        </div>
+    </center>
+    <form action="{% url 'articles' %}" method="POST">{% csrf_token %}
+		<center><input id="file-upload1" type="submit" for="file-upload1" class="custom-file-upload1" value="Articles">
+		</center>
+	</form>
+     <form action="/Check" method="GET">{% csrf_token %}
+		<center><input id="file-upload" type="submit" class="custom-file-upload" value="Check">
+		</center>
+	</form>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

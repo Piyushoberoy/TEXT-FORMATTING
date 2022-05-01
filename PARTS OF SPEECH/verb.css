@@ -1,0 +1,107 @@
+
+	* body{
+		background-image: url('v.jpg');
+        background-size: 100%;
+
+    }
+	 p{
+                background-color:rgba(0,0,0,0.5);
+                padding: 20px;
+                margin-left: 100px;
+                margin-right: 100px;
+                list-style-type:decimal;
+                font-size: 20px;
+                color: white;
+                text-align: center;
+                animation-name: example;
+                animation-duration: 4s;
+}
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: black;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+
+                }
+                
+            h1{
+            	font-size: 45px;
+            	background-color: white;
+            	text-align: center;
+            animation-duration: 4s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 80%;
+  }
+}
+
+           img{
+           	border-radius: 15px;
+           	size: 100%;
+           }
+
+dl{
+
+                background-color:rgba(0,0,0,0.3);
+                padding: 20px;
+                margin-left: 100px;
+                margin-right: 100px;
+                list-style-type:decimal;
+                font-size: 15px;
+  animation-duration: 4s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+            dl dt{
+                
+                margin: 20px;
+                color:orange;
+                background-color:black;
+
+	}
+	dl dd{
+		font-size: 20px;
+        color:white;
+		
+	}
+	ul li{
+		color: white;
+		font-size: 20px;
+		font-style: arial;
+        color: skyblue;
+	}
+
+img{
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 15px;
+	border-color: black;
+}
+

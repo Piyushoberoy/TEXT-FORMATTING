@@ -1,0 +1,65 @@
+* body{
+		background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-fun-english-training-class-enrollment-image_175910.jpg');
+        background-size: 100%;
+    }
+
+p{
+                background-color:rgba(0,0,0,0.5);
+                padding: 20px;
+                margin-left: 100px;
+                margin-right: 100px;
+                list-style-type:decimal;
+                font-size: 28px;
+                color: lightcoral;
+                text-align: center;
+            }
+            
+h1{
+            	font-size: 45px;
+            	background-color: white;
+            	text-align: center;
+                color:mediumturquoise;
+
+            }
+img{
+           	border-radius: 15px;
+           	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 15px;
+}
+
+h2 { 
+font-size: 30px;
+text-decoration:underline;
+color:crimson;
+font-weight: bold;
+}
+
+
+dl{
+                background-color:rgba(0,0,0,0.3);
+                padding: 20px;
+                margin-left: 100px;
+                margin-right: 100px;
+}
+
+dt{
+margin: 20px;
+height:28px;
+color: maroon;
+background-color: lavenderblush;
+font-size:20px;
+font-style: arial;
+}
+dd{
+font-size: 20px;
+color: gold;
+font-style: " times new roman";
+}
+li{
+
+font-size: 20px;
+font-style: timesnewroman;
+}
+font { text decoration: underline; }
+

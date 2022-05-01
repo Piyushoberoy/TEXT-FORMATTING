@@ -1,0 +1,115 @@
+*
+	body{
+		background-image:url('adverb.jpg');
+        background-size: 100%;
+    }
+	 p{
+                background-color:grey;
+                padding: 20px;
+                margin-left: 100px;
+                margin-right: 100px;
+                list-style-type:decimal;
+                font-size: 20px;
+                color: white;
+                text-align: center;
+                animation-duration: 3s;
+             animation-name: slidein;
+  
+            }
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+   0%  {background: red; left: 0px; top: 0px;}
+  25%  {background: yellow; left: 200px; top: 0px;}
+  50%  {background: blue; left: 200px; top: 200px;}
+  75%  {background: green; left: 0px; top: 200px;}
+  100% {background: red; left: 0px; top: 0px;}
+
+
+            h1{
+            	font-size: 45px;
+            	background-color: white;
+            	text-align: center;
+                animation: myfirst 10s 2;
+  animation-direction: infinity;
+
+            }
+
+            @keyframes myfirst {
+  0%   {background: red; left: 0px; top: 0px;}
+  25%  {background: yellow; left: 200px; top: 0px;}
+  50%  {background: blue; left: 200px; top: 200px;}
+  75%  {background: green; left: 0px; top: 200px;}
+  100% {background: red; left: 0px; top: 0px;}
+}
+           img{
+           	border-radius: 15px;
+           	size: 100%;
+           }
+
+dl{
+                background-color:pink;
+                padding: 20px;
+                margin-left: 100px;
+                margin-right: 100px;
+                list-style-type:decimal;
+                font-size: 15px;
+                 animation-duration: 4s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+
+            }
+
+            dl dt{
+                
+                margin: 20px;
+                color:red;
+                background-color:black;
+
+	}
+	dl dd{
+		font-size: 20px;
+		
+	}
+	ul li{
+		color: white;
+		font-size: 20px;
+		font-style: arial;
+        color: brown;
+	}
+img{
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 15px;
+	border-color: black;
+}
+
+

@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" href="{% static 'Content/logo.jpg' %}">
+	<title>Prepositions</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'Content/prep.css' %}">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div data-aos="zoom-in" data-aos-offset="150" data-aos-easing="ease-in-sine" data-aos-duration="1200">
+		<h1> What is Preposition?</h1>
+
+
+
+		<p>
+			Preposition is a word or phrase that connects a noun or pronoun to a verb or adjective in a sentence. They
+			are usually short words, and they normally are found in front of nouns. On rare occasions, prepositions can
+			be found in front of gerund verbs.</p>
+	</div>
+
+	<div data-aos="flip-left" data-aos-easing="ease-in-sine" data-aos-duration="1200">
+		<center><img src="{% static 'Content/preposition.jpg' %}" height="400" width="1000"></center>
+	</div>
+	<div data-aos="zoom-out-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+		<dl><B><u>
+					<FONT size="6px">TYPES OF PREPOSITIONS</FONT>
+				</u><B>
+
+
+					<div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine"
+						data-aos-duration="1200">
+						<dt>Simple preposition: </dt>
+
+
+						<dd> Simple prepositions are the short words used to show the relationship between nouns,
+							pronouns, or to join parts of a clause or sentence. Examples:- </dd>
+
+						<ul>
+							<li>The dog jumped out while the <Font color="black">car</font>
+								was moving.
+							</li>
+							<li>
+								Dorothy came upon the
+								<Font color="black">Tin Man.</font>
+
+							</li>
+						</ul>
+					</div>
+					<div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine"
+						data-aos-duration="1200">
+						<dt>Double Preposition:</dt>
+
+						<dd>Easily form a Double Prepositions by joining two simple prepositions.. Examples:-</dd>
+
+						<ul>
+							<li>The dog jumped out of the moving<Font color="black">car.</font>
+							</li>
+							<li>The child hid inside of the <Font color="black">cabinet.</Font>
+							</li>
+						</ul>
+					</div>
+
+
+					<div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine"
+						data-aos-duration="1200">
+						<dt> Compound Preposition:</dt>
+						<dd>Compound prepositions are those prepositions that are made by prefixing the preposition to a
+							noun, an adjective or an adverb. Say for example, amongst, amidst, above, around, along,
+							across, about, below, beneath, beside, between, beyond, outside, within, without..
+							Examples:-</dd>
+						<ul>
+							<li>The cat is jumping <Font color="black">around</font> the seat.</li>
+
+							<li>The car <Font color="black">pulled </font> along the driveway.
+							</li>
+
+
+						</ul>
+					</div>
+
+					<div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine"
+						data-aos-duration="900">
+
+						<dt> Participle Preposition:</dt>
+						<dd>Verbs that act as a preposition. Usually, end in -ing and -ed.. Examples:-</dd>
+						<ul>
+							<li>
+								<Font color="black">Barring</font>
+								a few minor mistakes, the play went pretty good.
+							</li>
+
+							<li>Everyone, please keep quiet during the class.<Font color="black">during </font>
+								the class.
+							</li>
+
+
+						</ul>
+					</div>
+					<div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine"
+						data-aos-duration="1200">
+						<dt>Phrase preposition:</dt>
+
+						<dd>A Phrase preposition includes a preposition, an object and the object’s modifier. Examples:-
+						</dd>
+						<ul>
+							<li>My little brother collected my trophy on <Font color="black">behalf </font>
+								of my sister. </li>
+
+							<li>
+								<Font color="black">In order </font> to avoid losses, he withdrew all money to mitigate
+								the risk.
+							</li>
+						</ul>
+					</div>
+
+					<div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine"
+						data-aos-duration="1200">
+
+						<dt>Disguised preposition:</dt>
+
+						<dd>Disguised prepositions are those prepositions which are not used in the sentences directly,
+							but we use them in a disguised way. Their shorter forms are used.<br> Examples:-</dd>
+						<ul>
+							<li>The ceremony will be held at 5 <Font color="black">o’ </font> clock. </li>
+							<li>We all went to <Font color="black">a </font> party</li>
+						</ul>
+					</div>
+		</dl>
+		<form action="{% url 'adjectives' %}" method="POST">{% csrf_token %}
+			<center><input id="file-upload2" type="submit" for="file-upload2" class="custom-file-upload2" value="Previous">
+			</center>
+		</form>
+		<form action="{% url 'content' %}" method="POST">{% csrf_token %}
+			<center><input id="file-upload" type="submit" for="file-upload" class="custom-file-upload" value="Index">
+			</center>
+		</form>
+		
+		<form action="{% url 'conjunctions' %}" method="POST">{% csrf_token %}
+			<center><input id="file-upload1" type="submit" for="file-upload1" class="custom-file-upload1" value="Next">
+			</center>
+		</form>
+	</div>
+
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+
+</body>
+
+</html>

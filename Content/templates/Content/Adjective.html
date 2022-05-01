@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+     <link rel="shortcut icon" href="{% static 'Content/logo.jpg' %}">
+     <title>Adjectives</title>
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="{% static 'Content/adj.css' %}">
+
+</head>
+
+<body>
+
+
+     <h1> What is an adjectives?</h1>
+     <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1200">
+          <p>
+               An adjective describes or modifies noun/s and pronoun/s in a sentence. It normally indicates quality,
+               size, shape, duration, feelings, contents, and more about a noun or pronoun.<br>In a sentence, nouns can
+               play the role of subject, direct object, indirect objects, subject complement, object complement,
+               appositive, or adjective.</p>
+     </div>
+     <div data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1500">
+          <center><img src="{% static 'Content/adjectives.jpg' %}" height="400" width="1000"></center>
+     </div>
+     <div data-aos="flip-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1200">
+          <dl>
+               <h2> TYPES OF ADJECTIVES</h2>
+               <div data-aos="fade-up-right" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                    data-aos-duration="1200">
+                    <dt>Descriptive Adjectives: </dt>
+                    <dd> A descriptive adjective is a word which describes nouns and pronouns. Most of the
+                         adjectives belong in this type. These adjectives provide information and attribute to the
+                         nouns/pronouns they modify or describe. Descriptive adjectives are also called qualitative
+                         adjectives.Examples:- </dd>
+
+                    <ul>
+                         <li>I saw a <Font color="red"><u> flying </u> </font> Eagle </li>
+                         <li>The <Font color="red"><u>hungry</u></font> cats are crying.</li>
+                    </ul>
+               </div>
+               <div data-aos="fade-up-left" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                    data-aos-duration="1200">
+                    <dt>Quantitative Adjectives:</dt>
+                    <dd>A quantitative adjective provides information about the quantity of the nouns/pronouns.
+                         This type belongs to the question category of ‘how much’ and ‘how many’. <br> Examples:-
+                    </dd>
+                    <ul>
+                         <li>They have
+                              <Font color="red"><u>three</u></font> children.
+                         </li>
+                         <li>You should have completed the <Font color="red"> <u>whole</u></Font> task.
+                         </li>
+                    </ul>
+               </div>
+               <div data-aos="fade-up-right" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                    data-aos-duration="1200">
+                    <dt>Proper adjectives </dt>
+                    <dd>Proper adjectives are the adjective form of proper nouns. When proper nouns modify or
+                         describe other nouns/pronouns, they become proper adjectives.<br> Examples:-</dd>
+
+                    <ul>
+                         <li>
+                              <Font color="red"><u>American </u></font> cars are very strong.
+                         </li>
+                         <li>I love <Font color="red"><u>KFC </u> </font> burgers.</li>
+                    </ul>
+               </div>
+               <div data-aos="fade-up-left" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                    data-aos-duration="1200">
+                    <dt>Demonstrative Adjectives</dt>
+                    <dd>A demonstrative adjective directly refers to something or someone. Demonstrative adjectives
+                         include the words: this, that, these, those.<br> Examples:-</dd>
+
+                    <ul>
+                         <li>
+                              <Font color="red"><u>This </u></font>car is mine
+                         </li>
+                         <li>
+                              <Font color="red"><u>These </u></font> cats are cute.
+                         </li>
+                    </ul>
+               </div>
+               <div data-aos="fade-up-right" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                    data-aos-duration="1200">
+                    <dt>Possessive Adjectives</dt>
+                    <dd>A possessive adjective indicates possession or ownership. It suggests the belongingness of
+                         something to someone/something. <br>Examples:-</dd>
+                    <ul>
+                         <li>
+                              <font color="red"><u>My</u></font> car is parked outside.
+                         </li>
+                         <li>
+                              <font color="red"><u>Our </u></font>job is almost done.
+                         </li>
+                    </ul>
+               </div>
+               <div data-aos="fade-up-left" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                    data-aos-duration="1200">
+                    <dt>Interrogative Adjectives</dt>
+                    <dd>An interrogative adjective asks a question. An interrogative adjective must be followed by
+                         a noun or a pronoun. The interrogative adjectives are: which, what, whose. These words
+                         will not be considered as adjectives if a noun does not follow right after them. ‘Whose’
+                         also belongs to the possessive adjective type. <br>Examples:-</dd>
+
+                    <ul>
+                         <li>
+                              <font color="red"><u>Which</u></font> phone do you use?
+                         </li>
+                         <li>
+                              <font color="red"><u>What</u></font> What game do you want to play?
+                         </li>
+                    </ul>
+               </div>
+               <div data-aos="fade-up-right" data-aos-offset="100" data-aos-easing="ease-in-sine"
+                    data-aos-duration="1200">
+                    <dt>Indefinite Adjectives</dt>
+                    <dd>An indefinite adjective describes or modifies a noun unspecifically. They provide
+                         indefinite/unspecific information about the noun. The common indefinite adjectives are
+                         few, many, much, most, all, any, each, every, either, nobody, several, some, etc.<br>
+                         Examples:-</dd>
+
+                    <ul>
+                         <li>I gave some <font color="red"><u>candy</u></font> to her</li>
+                         <li>I want a <font color="red"><u>few</u></font>moments alone. </li>
+                    </ul>
+               </div>
+          </dl>
+          <form action="{% url 'adverbs' %}" method="POST">{% csrf_token %}
+			<center><input id="file-upload2" type="submit" for="file-upload2" class="custom-file-upload2" value="Previous">
+			</center>
+		</form>
+		<form action="{% url 'content' %}" method="POST">{% csrf_token %}
+			<center><input id="file-upload" type="submit" for="file-upload" class="custom-file-upload" value="Index">
+			</center>
+		</form>
+		
+		<form action="{% url 'prepositions' %}" method="POST">{% csrf_token %}
+			<center><input id="file-upload1" type="submit" for="file-upload1" class="custom-file-upload1" value="Next">
+			</center>
+		</form>
+     </div>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+          AOS.init();
+     </script>
+</body>
+
+</html>

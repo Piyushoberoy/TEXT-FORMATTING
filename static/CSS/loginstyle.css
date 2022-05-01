@@ -1,0 +1,165 @@
+*{
+    margin:0;    
+}
+section{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(-45deg,#EE7752, #E73C7E,#23A6D5,#23D5AB );
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+
+}
+.nav{
+    color: orange;
+    float: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    backface-visibility: visible;
+    border-color: transparent;
+    
+}
+.nav a{
+    float: center;
+    color: rgb(227, 235, 238);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-color: transparent;
+}
+#Text_Formatting {
+    margin: 10px auto 20px;
+    font-family: Algerian;
+    float: center;
+    padding: 0 18px;
+    text-decoration: solid;
+    font-size: 90px;
+    text-align: center;
+}
+::marker {
+    color: transparent;
+    list-style-type: none;
+  }
+.loginbox{  
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 320px;
+    height: Auto;
+    padding: 80px 40px ;
+    background:rgba(0%, 0%,0%,0.4);
+    border-radius: 15px ;
+    padding: 50px;
+    margin: 40px 0px;    
+    }
+
+a{
+    text-decoration: none;
+}
+
+.icon{
+    width:100px ;
+    height:100px ;
+    border-radius: 50%;
+    position: absolute;
+    top:-50px;
+    left:155px
+    }
+h2{
+    margin: 0;
+    padding: 0 0 20px;
+    color: #efed40;
+    text-align: center;
+    font-size: 60px;
+}  
+.loginbox p {
+    margin: 0;
+    padding: 0;
+    font-weight:bold ;
+    color: white;
+    font-size: 20px;
+}  
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginbox input[type="text"],
+.loginbox input[type="password"],
+.loginbox input[type="email"],
+.loginbox input[type="tel"]
+{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40%;
+    color:white;
+    font-size: 18px;
+}
+.loginbox input[type="submit"]
+{
+  border: none; 
+  outline: none; 
+  height: 40px;
+  font-size: 16px;
+  color: antiquewhite;
+  background-color: crimson;  
+  cursor: pointer;
+  border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover
+{
+    background-color: #52ee93;
+}
+.loginbox a 
+{
+    color: navy;
+    font-size: 16px;
+    font-weight: bold;
+}
+.loginbox a:hover
+{
+    color: darkred;
+}
+@keyframes change {
+    0%{
+        background-position:0 50% ;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%; 
+    }
+    }
+
+    .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        opacity: 1;
+        transition: opacity 0.6s;
+        margin-bottom: 15px;
+      }
+      
+      .alert.success {background-color: #04AA6D;}
+      .alert.info {background-color: #2196F3;}
+      .alert.warning {background-color: #ff9800;}
+      
+      .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      .closebtn:hover {
+        color: black;
+      }

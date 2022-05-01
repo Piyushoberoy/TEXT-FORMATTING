@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> REGISTRATION </title>
+    <link rel="stylesheet" type="text/css" href="loginstyle.css">
+</head>
+
+<body>
+    <section>
+        <div class="nav">
+            <li>
+                <div id="Text_Formatting">Text Formatting</div>
+            </li>
+        </div>
+        <!--
+        <div class="alert">
+            <span class="closebtn">&times;</span>  
+            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+          </div>
+          -->
+        <div class="loginbox">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqjYWb_kZ7jZ_aCJJdFjLqxS-DBaGsJGxopg&usqp=CAU"
+                class="icon">
+            <form method="POST" action="{% url 'signup' %}" >
+                <p> FIRST NAME </p>
+                <input type="text" name="fname" placeholder=""  required>
+                <p> LAST NAME </p>
+                <input type="text" name="lname" placeholder=""  required><br>
+                <p> USER NAME </p>
+                <input type="text" name="username" placeholder=""  required><br>
+                <p> E-MAIL </p>
+                <input type="email" name="email" placeholder=""  required>
+                <p> PASSWORD </p>
+                <input type="password" name="pass1" placeholder="" required><br>
+                <br>
+                <p> CONFIRM PASSWORD </p>
+                <input type="password" name="pass2" placeholder="" required><br>
+                <br>
+                <!--<p> PHONE NUMBER </p>
+                <input type="tel" name="phone_number" placeholder=""  required>-->
+                <br>
+                <input type="submit" value="REGISTER">
+            </form>
+        </div>
+    </section>
+    <script>
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+        
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+          }
+        }
+        </script>
+</body>
+
+</html>

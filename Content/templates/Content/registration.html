@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="{% static 'Content/logo.jpg' %}">
+    <meta charset="UTF-8">
+    <title> REGISTRATION </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Content/loginstyle.css' %}">
+</head>
+
+<body>
+    <section>
+        <div class="nav">
+            <li>
+                <div id="Text_Formatting">Text Formatting</div>
+            </li>
+        </div>
+        <!--<div class="alert" style="display: none;" id="new1">
+            <span class="closebtn">&times;</span>
+            {{error}}
+        </div>-->
+
+        <center>
+            <div class="loginbox">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqjYWb_kZ7jZ_aCJJdFjLqxS-DBaGsJGxopg&usqp=CAU"
+                    class="icon">
+                <form method="POST" action="{% url 'signup' %}" name="myform">
+                    {%csrf_token %}
+                    <p> FIRST NAME </p>
+                    <input type="text" name="fname" placeholder="" required>
+                    <p> LAST NAME </p>
+                    <input type="text" name="lname" placeholder="" required><br>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div>
+                        {{user_msg}}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    <p> USER NAME </p>
+                    <input type="text" name="username" placeholder="" required><br>
+                    <p> E-MAIL </p>
+                    <input type="email" name="email" placeholder="" required>
+                    <div id="error"></div>
+                    <p> PASSWORD </p>
+                    <input type="password" name="pass1" placeholder="" id="pass3" required><br>
+                    <br>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div>
+                        {{pswd_msg}}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    <p> CONFIRM PASSWORD </p>
+                    <input type="password" name="pass2" placeholder="" id="pass4" required><br>
+                    <br>
+                    <!--<p> PHONE NUMBER </p>
+                <input type="tel" name="phone_number" placeholder=""  required>-->
+                    <br>
+                    {% csrf_token %}
+                    <input type="submit" value="REGISTER" onclick="show()">
+                </form>
+                <form action="{% url 'login' %}">
+                    <input type="submit" value="LOGIN" onclick="check()">
+                </form>
+            </div>
+        </center>
+    </section>
+    <script>
+        function validateform() {
+            x = document.forms["myform"]["pass1"].value;
+            y = document.forms["myform"]["pass2"].value;
+            if (x != y) {
+                alert("Incorrect confirmation password")
+            }
+        }
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function () { div.style.display = "none"; }, 600);
+            }
+        }
+        function check() {
+            if (document.getElementById("pass3").value == document.getElementById("pass4").value)
+                return true;
+            else
+                document.getElementById("error").innerHTML = "Wrong keyword entry."
+            return false;
+        }
+        function show() {
+
+            document.getElementById("new1").style.display = "block";
+
+        }
+
+    </script>
+</body>
+
+</html>

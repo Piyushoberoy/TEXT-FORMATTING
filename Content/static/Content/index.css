@@ -1,0 +1,269 @@
+ol{
+    background-color:rgba(0,0,0,0.5);
+    padding: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+    list-style-type:decimal;
+    font-size: 28px;
+}
+
+
+ol li{
+    background-color:black;
+    margin: 10px;
+    border-style: groove;
+    color: white;
+    animation: box 15s ease-in-out infinite;
+}
+
+.nav{
+    color: orange;
+    float: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    backface-visibility: visible;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.nav a{
+    float: center;
+    color: rgb(227, 235, 238);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+ 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+::marker {
+    color: transparent;
+    list-style-type: none;
+  }
+
+.bodyClass{
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    background:url("https://t4.ftcdn.net/jpg/00/50/80/87/360_F_50808714_k8aOb1iu3Gwyt3rVXq0XLO191F8lBwxl.jpg") no-repeat center center fixed; 
+    background-size: cover;
+}
+
+#p1{
+    border: 5px solid black;
+    border-style: groove;
+    background-color:lightcoral;
+    animation: change 15s ease-in-out infinite;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    font-size: xx-large;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+input{
+    color: black;
+    border: 1px solid darkblue;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    border-radius: 100px 100px 100px 100px;
+}
+input:hover{
+    background-color: rgb(14, 144, 177);
+    border: 1px solid darkblue;
+    color: white;
+}
+
+input::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: darkblue;
+    z-index: -1;
+    transition: 0.8s;
+}
+input::before
+{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+@keyframes change { 
+0% { background-color:lightcoral;}
+25% { background-color:yellow;}
+50% { background-color:lavender;}
+100% { background-color:lightgreen;}
+}
+
+@keyframes box { 
+0% { background-color:black;}
+25% { background-color:MediumSeaGreen;}
+50% { background-color:DarkCyan;}
+100% { background-color:palevioletred;}
+}
+
+.btn{
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    width: 25%;
+    border-radius: 100px 100px 0px 0px;
+}
+
+.btn2{
+    color: #fff;
+}
+
+.btn2:hover{
+    color: #3498db;
+}
+.btn::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.btn2::before
+{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.btn2::before
+{
+    height: 180%;
+}
+
+.btn2:hover::before{
+    height: 0%;
+}
+button{
+    width: 92.3%;
+}
+
+
+/*DROPDOWN*/
+.dropbtn {
+
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    padding: 0px 0px;
+    margin: -50px 40px;
+    
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 100px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    margin: 20px 20px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {display: block;box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.8);}
+  
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+  .alert {
+    padding: 20px;
+    background-color: #04AA6D;;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+  }
+  
+  .alert.success {background-color: #04AA6D;}
+  .alert.info {background-color: #2196F3;}
+  .alert.warning {background-color: #ff9800;}
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+
+
+/*
+  h1{
+    font-size: 45px;
+    background-color: white;
+    text-align: center;
+
+    background: linear-gradient(90deg, #000, #fff, #000);
+background-repeat: no-repeat;
+background-size: 80%;
+animation: animate 3s linear infinite;
+-webkit-background-clip: text;
+-webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+0% {
+background-position: -500%;
+}
+100% {
+background-position: 500%;
+}
+}
+*/

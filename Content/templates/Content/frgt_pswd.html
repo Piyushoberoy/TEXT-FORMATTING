@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="{% static 'Content/logo.jpg' %}">
+    <title> Reset Password </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Content/frgt_pswd.css' %}" />
+</head>
+
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuhyzAxTTZATQdk_FPDKKK4h3AYw_DaGWK2Q&usqp=CAU"
+        class="img">
+    <form method="POST" action="{% url 'frgt_pswd_msg' %}">{% csrf_token %}
+        <h1> FORGOT PASSWORD </h1>
+        <p> Enter your registered email</p>
+        <div class="formbox">
+            <form>
+                <input type="email" name="email" placeholder=" name@mail.dns" required>
+            </form><br>
+            <br>
+            <a href="{% url 'frgt_pswd_msg' %}">
+                <button> Sumbit </button>
+            </a>
+
+        </div>
+    </form>
+</body>
+
+</html>
