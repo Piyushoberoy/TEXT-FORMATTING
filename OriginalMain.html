@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="static/CSS/logo.jpg">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="static/CSS/Main1.css">
+</head>
+
+<body>
+    <div class="nav">
+        <li>
+            <div id="Text_Formatting">Text Formatting</div>
+        </li>
+        <form action="{% url 'login' %}" method="POST">
+        <li>
+            <div id="login">
+                <div class="dropdown">
+                    <a><img class="dropbtn" src="static/CSS/picture.png" alt="profile" height="65px"></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'login' %}">Sign in/Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        </form>
+    </div>
+    <div class="alert">
+        <span class="closebtn">&times;</span>
+        Dummy website
+    </div>
+
+    <div class="container">
+        <a>
+            <div id="mbtn">
+                <div class="btnthumb">
+                    <button class="btn btn1">
+                        <form action="Content/" method="POST">
+                            <span id="side"><input type="submit" class="custom-file-upload"
+                                    value="Parts of Speech"></span>
+                        </form>
+                        <form action="{% url 'articles' %}" method="POST">
+                            <span id="side1"><input type="submit" class="custom-file-upload1" value="Articles"></span>
+                        </form>
+                    </button>
+                </div>
+            </div>
+        </a>
+        <form action="Check/" method="POST">
+            <a>
+                <button class="btn btn2">Check</button>
+            </a>
+    </div>
+
+    <script>
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function () { div.style.display = "none"; }, 600);
+            }
+        }
+    </script>
+</body>
+
+</html>
