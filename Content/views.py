@@ -11,53 +11,53 @@ import os
 def Content(request):
     context={'file':Data.objects.all()}
     if request.user.is_anonymous:
-        return redirect("error_404")
+        return redirect("/login")
     return render(request,'Content/index.html',context)
 
 def nouns(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         return render(request,'Content/Noun.html')
-    return redirect("error_404")
+    return redirect("/login")
 
 def pronouns(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         return render(request,'Content/Pronoun.html')
-    return redirect("error_404")
+    return redirect("/login")
 
 def verbs(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         return render(request,'Content/Verb.html')
-    return redirect("error_404")
+    return redirect("/login")
 
 def adverbs(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         return render(request,'Content/Adverb.html')
-    return redirect("error_404")
+    return redirect("/login")
 
 def adjectives(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         return render(request,'Content/Adjective.html')
-    return redirect("error_404")
+    return redirect("/login")
 
 def prepositions(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         return render(request,'Content/Preposition.html')
-    return redirect("error_404")
+    return redirect("/login")
 
 def conjunctions(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         return render(request,'Content/Conjunction.html')
-    return redirect("error_404")
+    return redirect("/login")
 
 def interjections(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         return render(request,'Content/Interjection.html')
-    return redirect("error_404")
+    return redirect("/login")
 
 def articles(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         return render(request,'Content/Article.html')
-    return redirect("error_404")
+    return redirect("/login")
 
 #SIGN IN/ SIGN UP
 '''def login1(request):
@@ -67,7 +67,7 @@ def frgt_pswd(request):
     return render(request,'Content/frgt_pswd.html')
 
 def frgt_pswd_msg(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         msg='To reset your password click on reset password or if you have not request for this one then ignore this mail'
         email=request.POST['email']
         send_mail('RESET PASSWORD',
@@ -76,14 +76,14 @@ def frgt_pswd_msg(request):
         [email],
         fail_silently=False)
         return render(request,'Content/frgt_pswd_msg.html')
-    return redirect("error_404")
+    return redirect("/login")
 
 def register(request):
     return render(request,'Content/registration.html')'''
 
 #USER DATA
 '''def handleSignup(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         #txt = request.POST.get('text', 'This feature will be available soon.')
         username=request.POST['username']
         fname=request.POST['fname']
@@ -117,10 +117,10 @@ def register(request):
 
         messages.success(request,"Your account has been successfully created")
         return redirect("/")
-    return redirect("error_404")'''
+    return redirect("/login")'''
 
 '''def handlesignin(request):
-    if request.method=='POST':
+    if request.user.is_authenticated:
         loginusername=request.POST['loginusername']
         loginpassword=request.POST['loginpassword']
         user = authenticate(username=loginusername, password=loginpassword)
@@ -134,7 +134,7 @@ def register(request):
             messages.error(request,"Invalid credentials, please try again")
             return redirect('home')
 
-    return redirect("error_404")
+    return redirect("/login")
 '''
 '''def handlesignout(request):
     logout(request)
@@ -143,12 +143,12 @@ def register(request):
 
 def del_user(request):
     print("hello")
-    if request.method=='POST':
+    if request.user.is_authenticated:
         print("1258")
         request.user.delete()
         messages.success(request, "Successfully Deleted")
         return HttpResponse("Deleted")
-    return redirect("error_404")'''
+    return redirect("/login")'''
 
 def Download(request):
     file_path=os.path.join(settings.MEDIA_ROOT,path)
@@ -157,4 +157,4 @@ def Download(request):
             response=HttpResponse(fh.read(),content_type='application/doc')
             response['Content-Disposition']='inline;filename='+os.path.basename(file_path)
             return response
-    return redirect("error_404")
+    return redirect("/login")

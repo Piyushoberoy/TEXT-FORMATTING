@@ -15,24 +15,39 @@
         <li>
             <div id="Text_Formatting">Text Formatting</div>
         </li>
+        {% if user.is_authenticated %}
         <li>
             <div id="login">
                 <div class="dropdown">
                     <a><img class="dropbtn" src="{% static 'CSS/picture.png' %}" alt="profile" height="65px"></a>
                     <div class="dropdown-content">
-                        <!--<a>{{username}}</a>-->
+                        <a>{{username}}</a>
                         <form action="{% url 'delete_user' %}" method="POST"> {% csrf_token %}
                             <input type="submit" value="Delete account">
                         </form>
-                        <form action="{% url 'home' %}" method="POST"> {% csrf_token %}
+                        <form action="{% url 'signout' %}" method="POST"> {% csrf_token %}
                             <input type="submit" value="Log Out" style="margin: 20px;">
                         </form>
                     </div>
                 </div>
             </div>
-
         </li>
+        {% else %}
+        <form action="{% url 'login' %}" method="POST"> {% csrf_token %}
+        <li>
+            <div id="login">
+                <div class="dropdown">
+                    <a><img class="dropbtn" src="{% static 'CSS/picture.png' %}" alt="profile" height="65px"></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'login' %}">Sign in/Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        </form>
     </div>
+    {% endif %}
+
     {% if messages %}
     {% for message in messages %}
     <div class="alert">

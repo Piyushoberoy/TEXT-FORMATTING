@@ -21,19 +21,23 @@ from django.conf.urls.static import static
 from django.conf.urls import url
 from django.views.static import serve
 
+#CHANGED DJANGO ADMIN PAGE TEXT
+admin.site.site_header = "Text Formatting Administrator Panel"
+admin.site.site_title = "Text Formatting Admin Portal"
+admin.site.index_title = "Welcome to Text Formatting"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home,name='home'),
     path('PageNotFound',views.error_404,name='error_404'),
-    path('Welcome', views.home1,name='home1'),
     path('Content/',include('Content.urls')),
     path('Check/',include('Check.urls'),name='check'),
-    path('Signup',views.handleSignup,name='signup'),
-
-    path('login',views.login1,name='login'),
+    path('Signup/',views.handleSignup,name='signup'),
+    path("Signout/",views.handlesignout, name="signout"),
+    path('login/',views.login1,name='login'),
     path('Forget_password',views.frgt_pswd,name='frgt_pswd'),
     path('Forget_password_reset',views.frgt_pswd_msg,name='frgt_pswd_msg'),
-    path('Register',views.register,name='register'),
+    path("Password_reset",views.reset_password, name="password_reset"),
     path('Delete',views.del_user,name='delete_user'),
 
     url(r'^download/(?P<path>.*)$',serve,{'document_root':settings.MEDIA_ROOT}),
