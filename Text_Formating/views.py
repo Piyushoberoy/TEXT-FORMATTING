@@ -81,8 +81,8 @@ def reset_password(request):
         user=User.objects.get(email=email)
         # print(user.first_name)
         password=request.POST.get('password')
-        confirmatio_password=request.POST.get('confirmation_password')
-        if password==confirmatio_password:
+        confirmation_password=request.POST.get('confirmation_password')
+        if password==confirmation_password:
             user.set_password(password)
             user.save()
             email=None
