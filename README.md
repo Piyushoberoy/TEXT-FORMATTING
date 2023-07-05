@@ -31,22 +31,15 @@ The following technologies will be utilized to develop the blogging website:
 
 To install and run the project locally, follow these steps:
 
-1. Clone the repository: `git clone [repository URL]`
-2. Install the required dependencies: `pip install -r requirements.txt`
-3. Set up the database: [Provide instructions to set up the database]
-4. Run the development server: `python manage.py runserver`
-5. Access the website locally via your web browser: `http://localhost:8000`
+1. Clone the repository: `git clone https://github.com/Piyushoberoy/TEXT-FORMATTING.git`
+2. Extract files from `MANAGE.PY_IS_HERE_EXTRACT_ALL_FILES`
+3. Install the required dependencies: `pip install -r PREREQUISITES.txt`
+4. Set up the database: Create a superuser using the command `python manage.py createsuperuser`, so that you can access the admin page where all data is stored.
+5. Run the development server: `python manage.py runserver`
+6. Access the website locally via your web browser: `http://localhost:8000` or change `ALLOWED_HOST` as per your need in settings.py.
 
 ## Contribution
 
 Contributions to the project are welcome! If you want to contribute, please follow the guidelines outlined in the CONTRIBUTING.md file.
-
-## License
-
-[Specify the license under which the project is distributed.]
-
-## Contact
-
-For any inquiries or feedback, please contact [provide contact information].
 
 Happy blogging and grammar learning!
